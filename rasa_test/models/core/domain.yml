@@ -1,0 +1,34 @@
+%YAML 1.1
+---
+action_factory: null
+action_names:
+- utter_greet
+- utter_bye
+- utter_query
+actions:
+- utter_greet
+- utter_bye
+- utter_query
+config:
+  store_entities_as_slots: true
+entities:
+- topic
+intents:
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- query:
+    use_entities: true
+slots:
+  topic:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_bye:
+  - text: Talk to you later.
+  - text: Bye bye :(
+  utter_greet:
+  - text: Hello! How can I help?
+  utter_query:
+  - text: got query

@@ -1,0 +1,138 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "excuse me",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "listen",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "?",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "i have a question",
+        "intent": "query",
+        "entities": []
+      },
+      {
+        "text": "what is wss",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "wss",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "explain zxc",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "zxc",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "how does qwe work?",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "qwe ",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "describe dfg",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 9,
+            "end": 12,
+            "value": "dfg",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "working of fghf",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 11,
+            "end": 15,
+            "value": "fghf",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "fdtyfcv?",
+        "intent": "query",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "fdtyfcv",
+            "entity": "topic"
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "later",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "exit",
+        "intent": "bye",
+        "entities": []
+      },
+      {
+        "text": "thanks",
+        "intent": "bye",
+        "entities": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ChatBot
+        </title>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+
+        <script type=text/javascript src="static/jquery-3.3.1.min.js"></script>
+        <script>
+            function sendQuery() {
+
+                var str = document.getElementById("myQuery").value;
+                if(str == ""){
+                    return;
+                }
+
+                document.getElementById('myQuery').value = '';
+
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("chat").innerHTML += `
+                                    <tr>
+                                        <td class="avatar_table" style="width:3%; text-align:left"><img src="/static/bot.png" alt="Avatar" class="avatar w3-circle"></td>
+                                        <td style="width:94%; text-align:left; overflow-x:auto">` + this.responseText + `</td>
+                                        <td class="avatar_table" style="width:3%"></td>
+                                    </tr>`;
+                        document.getElementById('last').scrollIntoView();
+                    }
+                };
+
+                document.getElementById("chat").innerHTML += `
+                            <tr>
+                                <td class="avatar_table" style="width:3%"></td>
+                                <td style="width:94%; text-align:right; overflow-x:auto">` + str + `</td>
+                                <td class="avatar_table" style="width:3%; text-align:right"><img src="/static/user.png" alt="Avatar" class="avatar w3-circle"></td>
+                            </tr>`;
+                xmlhttp.open("GET", "/myquery?q=" + str, true);
+                xmlhttp.send();
+                document.getElementById('last').scrollIntoView();
+            }
+        </script>        
+    </head>
+    
+    <body>
+        <div class="split right">
+          <div style="height:100%" >
+
+              <div id="chatHistory">
+                  <table id="chat">
+                        <tr>
+                            <td class="avatar_table" style="width:3%; text-align:left"><img src="/static/bot.png" alt="Avatar" class="avatar w3-circle"></td>
+                            <td style="width:94%; text-align:left; overflow-x:auto">Hi</br>How can I help?</td>
+                            <td class="avatar_table" style="width:3%"></td>
+                        </tr>
+                      <!-- append chats here -->
+                  </table>
+                  <span id="last"></span>
+              </div>
+
+              <div id="chatInput">
+                  <input id="myQuery" type="text" style="height:100%; width:100%" placeholder="Enter Your Query"><br>
+              </div>
+          </div>
+        </div>
+        
+        <div class="split left" id="graphics">
+            <img src="static/bosch-logo.png">
+            <p>
+                ChatBot</br>
+                RBEI
+            </p>
+        </div>
+        
+        <script>
+                var input = document.getElementById("myQuery");
+                input.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        sendQuery();
+                    }
+                });
+        </script>
+    </body>
+</html>

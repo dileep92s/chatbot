@@ -1,0 +1,128 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "excuse me"
+      },
+      {
+        "intent": "greet",
+        "text": "listen"
+      },
+      {
+        "intent": "greet",
+        "text": "?"
+      },
+      {
+        "intent": "query",
+        "text": "i have a question"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "wss",
+            "entity": "topic"
+          }
+        ],
+        "text": "what is wss"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "zxc",
+            "entity": "topic"
+          }
+        ],
+        "text": "explain zxc"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "qwe ",
+            "entity": "topic"
+          }
+        ],
+        "text": "how does qwe work?"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 9,
+            "end": 12,
+            "value": "dfg",
+            "entity": "topic"
+          }
+        ],
+        "text": "describe dfg"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 11,
+            "end": 15,
+            "value": "fghf",
+            "entity": "topic"
+          }
+        ],
+        "text": "working of fghf"
+      },
+      {
+        "intent": "query",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "fdtyfcv",
+            "entity": "topic"
+          }
+        ],
+        "text": "fdtyfcv?"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "good bye"
+      },
+      {
+        "intent": "bye",
+        "text": "later"
+      },
+      {
+        "intent": "bye",
+        "text": "exit"
+      },
+      {
+        "intent": "bye",
+        "text": "thanks"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

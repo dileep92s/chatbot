@@ -1,0 +1,1 @@
+ python -m rasa_core.server -d models/core/ -u models/default/nlu/ -o logs

@@ -1,0 +1,30 @@
+slots:
+  topic:
+    type: text
+
+
+intents:
+ - greet
+ - bye
+ - query
+
+
+entities:
+ - topic
+
+
+templates:
+  utter_greet:
+    - 'Hello! How can I help?'
+  utter_bye:
+    - 'Talk to you later.'
+    - 'Bye bye :('
+  utter_query:
+    - 'got query'
+
+
+actions:
+ - utter_greet
+ - utter_bye
+ - utter_query
+
